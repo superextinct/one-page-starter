@@ -1,0 +1,45 @@
+header {
+  position: relative;
+
+  h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    margin: 0;
+  }
+}
+
+#more {
+  position: absolute;
+  left: 50%;
+  bottom: 5em;
+  transform: translate(-50%, -50%);
+  color: inherit;
+  opacity: 0.8;
+  animation: upAndDown ease-in-out 2s infinite;
+  transition: opacity ease 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@keyframes upAndDown {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  25% {
+    transform: translate(-50%, -50%);
+  }
+
+  75% {
+    transform: translate(-50%, -100%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}

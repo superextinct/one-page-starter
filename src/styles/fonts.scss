@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Sawton Circular";
+  src: url("/assets/fonts/SawtonCircular-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sawton Circular";
+  src: url("/assets/fonts/SawtonCircular-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Sawton Circular", sans-serif;
+}

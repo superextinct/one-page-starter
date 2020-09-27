@@ -1,5 +1,7 @@
-@import "~css.gg/icons/css/chevron-down";
-@import "footer";
+@charset "utf-8";
+
+@import "fonts";
+@import "icons";
 
 * {
   box-sizing: border-box;
@@ -17,7 +19,6 @@ body {
 }
 
 body {
-  font-family: sans-serif;
   background: #111;
   color: #fff;
 }
@@ -30,50 +31,15 @@ footer {
 
 .slide {
   height: 100vh;
-  border-bottom: 1px dashed #444;
   scroll-snap-align: start;
+  // Nur zur besseren Verständlichkeit, kann weg:
+  border-bottom: 1px dashed #444;
 }
 
-header {
-  position: relative;
+@import "slides/intro";
+@import "slides/slide1";
+@import "slides/slide2";
+@import "slides/slide3";
+// Weitere Slides ...
 
-  h1 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-#more {
-  position: absolute;
-  left: 50%;
-  bottom: 5em;
-  transform: translate(-50%, -50%);
-  color: inherit;
-  opacity: 0.8;
-  animation: upAndDown ease-in-out 2s infinite;
-  transition: opacity ease 0.2s;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-@keyframes upAndDown {
-  0% {
-    transform: translate(-50%, -50%);
-  }
-
-  25% {
-    transform: translate(-50%, -50%);
-  }
-
-  75% {
-    transform: translate(-50%, -100%);
-  }
-
-  100% {
-    transform: translate(-50%, -50%);
-  }
-}
+@import "footer";

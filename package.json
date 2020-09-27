@@ -2,12 +2,14 @@
   "name": "webpack-starter",
   "version": "1.0.0",
   "description": "A light foundation for your next frontend project based on webpack.",
+  "main": "index.js",
   "scripts": {
     "lint": "npm run lint:styles; npm run lint:scripts",
     "lint:styles": "stylelint src",
     "lint:scripts": "eslint src",
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js --colors",
-    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
+    "dev": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -60,7 +62,9 @@
     "core-js": "^3.6.5",
     "css.gg": "^2.0.0",
     "d3": "^6.2.0",
+    "express": "^4.17.1",
     "intersection-observer": "^0.11.0",
-    "scrollama": "^2.2.1"
+    "scrollama": "^2.2.1",
+    "webpack-dev-middleware": "^3.7.2"
   }
 }

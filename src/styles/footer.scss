@@ -1,0 +1,34 @@
+footer {
+  display: flex;
+  min-height: 66vh;
+  background-color: #0e0e0e;
+  scroll-snap-align: end;
+  padding: 2rem;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    align-self: center;
+    margin: 0 auto;
+    padding: 0;
+
+    li {
+      display: flex;
+      flex-basis: calc(960px * 999 - 100% * 9999);
+      margin: 2em;
+      background-color: #0f0f0f;
+      box-shadow: 0 8px 18px -5px rgba(0, 0, 0, 0.3);
+      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .media {
+        text-decoration: none;
+      }
+    }
+  }
+}

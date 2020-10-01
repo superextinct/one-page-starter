@@ -32,8 +32,14 @@ footer {
 .slide {
   height: 100vh;
   scroll-snap-align: start;
+  position: relative;
   // Nur zur besseren Verständlichkeit, kann weg:
   border-bottom: 1px dashed #444;
+}
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
 }
 
 @import "slides/intro";

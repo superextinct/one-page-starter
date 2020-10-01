@@ -4,7 +4,7 @@ class Chart1 {
     setup() {
         this.width = 600;
         this.height = 400;
-        this.margin = { left: 50, top: 50, right: 50, bottom: 50 };
+        this.margin = { left: 100, top: 50, right: 50, bottom: 60 };
         this.hasAnimated = false;
 
         // SVG Größe bestimmen
@@ -48,6 +48,26 @@ class Chart1 {
 
         this.svg.append("g")
             .call(d3.axisLeft(yScale));
+
+        // Labels für Achsen
+
+        // X Achse
+        this.svg.append("text")
+            .attr("text-anchor", "end")
+            .attr("x", this.width)
+            .attr("y", this.height + 50)
+            .attr("fill", "white")
+            .text("Jahre");
+
+        // Y Achse
+        this.svg.append("text")
+            .attr("text-anchor", "end")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -this.margin.left + 50)
+            .attr("x", 0)
+            .attr("fill", "white")
+            .text("Aktienwert");
+
 
         // Daten und Skala für Zugriff außerhalb von setup() speichern
         this.data = data;

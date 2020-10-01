@@ -8,14 +8,14 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  //scroll-behavior: smooth;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  scroll-snap-type: y mandatory;
+  //scroll-snap-type: y mandatory;
 }
 
 body {
@@ -29,11 +29,32 @@ footer {
   width: 100%;
 }
 
+header {
+  position: relative;
+  z-index: 300;
+  background-color: #000;
+}
+
 .slide {
   height: 100vh;
-  scroll-snap-align: start;
+  //scroll-snap-align: start;
   // Nur zur besseren Verständlichkeit, kann weg:
   border-bottom: 1px dashed #444;
+}
+
+#chart {
+  position: sticky;
+  width: 100vw;
+  top: 0;
+  bottom: 70vh;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-top: 10vh;
+  }
 }
 
 @import "slides/intro";

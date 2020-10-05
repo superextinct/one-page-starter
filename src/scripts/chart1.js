@@ -75,8 +75,8 @@ class Chart1 {
         this.yScale = yScale;
     }
 
-    enter() {
-        if (!this.hasAnimated) {
+    reached() {
+        if (!this.hasAnimated && this.data) {
             this.svg.append("path")
                 .datum(this.data)
                 .attr("fill", "#cce5df")
@@ -96,7 +96,7 @@ class Chart1 {
         }
     }
 
-    exit() {
+    exited() {
         console.log("Chart 1 exited");
     }
 }

@@ -1,7 +1,11 @@
 @charset "utf-8";
 
 @import "fonts";
-@import "icons";
+
+@import "~css.gg/icons/css/chevron-down";
+
+// Icons von https://css.gg/app können eingebunden werden mit
+// @import "~css.gg/icons/css/ICON_NAME";
 
 * {
   box-sizing: border-box;
@@ -24,8 +28,7 @@ body {
 }
 
 main,
-.slide,
-footer {
+.slide {
   width: 100%;
 }
 
@@ -47,5 +50,3 @@ footer {
 @import "slides/slide2";
 @import "slides/slide3";
 // Weitere Slides ...
-
-@import "footer";

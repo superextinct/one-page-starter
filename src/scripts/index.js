@@ -31,12 +31,12 @@ scroller
   })
   .onStepEnter(response => {
     if (charts[response.index]) {
-      charts[response.index].enter();
+      charts[response.index].reached();
     }
   })
   .onStepExit(response => {
     if (charts[response.index]) {
-      charts[response.index].exit();
+      charts[response.index].exited();
     }
   });
 

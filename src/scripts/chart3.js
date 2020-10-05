@@ -15,11 +15,11 @@ class Chart3 {
                 .attr("transform", `translate(${this.margin.left}, ${this.margin.top})`);
     }
 
-    enter() {
-        console.log("Chart 3 entered");
+    reached() {
+        console.log("Chart 3 reached");
     }
     
-    exit() {
+    exited() {
         console.log("Chart 3 exited");
     }
 }
